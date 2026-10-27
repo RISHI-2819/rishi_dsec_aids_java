@@ -243,3 +243,40 @@ public class Main {
         sc.close();
     }
 }
+
+10. FIND THE UNIQUE ELEMENTS:
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int a[] = new int[5];
+
+        System.out.println("Enter 5 elements:");
+
+        for (int i = 0; i < 5; i++) {
+            a[i] = sc.nextInt();
+        }
+
+        System.out.println("Unique elements:");
+
+        for (int i = 0; i < 5; i++) {
+            int count = 0;
+
+            for (int j = 0; j < 5; j++) {
+                if (a[i] == a[j]) {
+                    count++;
+                }
+            }
+
+            if (count == 1) {
+                System.out.print(a[i] + " ");
+            }
+        }
+
+        sc.close();
+    }
+}
