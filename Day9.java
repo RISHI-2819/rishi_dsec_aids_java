@@ -142,3 +142,29 @@ public class Main {
         System.out.print(sb);
     }
 }
+
+8.REMOVE SPECIAL CHARACTER:
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String s = sc.nextLine();
+
+        StringBuilder sb = new StringBuilder(s);
+
+        for (int i = 0; i < sb.length(); i++) {
+
+            char ch = sb.charAt(i);
+
+            if (!Character.isLetterOrDigit(ch)) {
+                sb.deleteCharAt(i);
+                i--;
+            }
+        }
+
+        System.out.println(sb);
+    }
+}
