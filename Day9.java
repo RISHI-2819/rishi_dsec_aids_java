@@ -99,3 +99,24 @@ public class Main {
         System.out.println(sb);
     }
 }
+
+6.ODD NUMBER EVEN NUMBER  :
+    import java.io.*;
+public class Main{
+    public static void main(String [] args) throws Exception{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        System.out.print("Enter the Starting Number : ");
+        int Start = Integer.parseInt(br.readLine());
+        System.out.print("Enter the ending Number : ");
+        int End = Integer.parseInt(br.readLine());
+        int Even= 0,Odd = 0;
+        for(int i = Start;i<=End;i++){
+            if(i%2==0){
+                Even++;
+            }else{
+                Odd++;
+            }
+        }System.out.println("The number  of even number : "+Even);
+        System.out.println("The number of Odd number : " + Odd);
+    }
+}
