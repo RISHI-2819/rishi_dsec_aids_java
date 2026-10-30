@@ -38,3 +38,37 @@ public static void main( String[]args){
     }
 }
 }
+
+3. removing first and last letter:
+
+import java.util.Scanner;
+public class Main{
+public static void main( String[]args){
+    Scanner sc = new Scanner( System.in);
+    System.out.print(" Enter sentences:");
+    String s = sc.nextLine();
+    StringBuilder sb = new StringBuilder(s);
+    if(sb.length()>=2){
+        sb.deleteCharAt(sb.length()-1);
+        sb.deleteCharAt(0);
+        System.out.println(sb);
+    }
+    else{
+        System.out.println(" enter atleast 3 characters");
+    }
+}
+}
+
+4.bufferd reader:
+
+import java.io.*;
+public class Main {
+    public static void main(String[] args)throws Exception{
+        BufferedReader br=new BufferedReader( 
+            new InputStreamReader(System.in));
+        System.out.println(" enter your name");
+        String name = br.readLine();
+        System.out.print("welcome  " + name);
+        
+    }
+}
